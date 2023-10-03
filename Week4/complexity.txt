@@ -1,0 +1,76 @@
+Đánh giá độ phức tạp của từng hàm
+1. Hàm findNode(): O(n)		
+	+ Tốt nhất: khi node cần tìm là gốc -> O(1)
+	+ Xấu nhất: khi node cần tìm là node cuối trong cây hoặc node không tồn tại -> O(n)
+		
+2. Hàm insert(): O(n)
+	+ Tốt nhất: khi cây rỗng và chỉ cần thêm một node root -> O(1)
+   	+ Xấu nhất: khi cây đã đầy và phải duyệt qua tất cả các node để thêm một node mới -> O(n)
+
+3. Hàm remove(): O(n)
+	+ Tốt nhất: khi node cần xóa là node lá hoặc node có 1 con -> O(1)
+	+ Xấu nhất: node cần xóa là node gốc hoặc node không tồn tại phải duyệt qua tất cả các node để xóa -> O(n)
+
+4. Hàm preorder(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+5. Hàm postorder(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+6. Hàm isBinaryTree():	O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con nên phải duyệt qua tất cả các node trong cây để kiểm tra xem cây con có phải là cây nhị phân không -> O(n)
+
+7. Hàm isBinarySearchTree(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con nên phải duyệt qua tất cả các node trong cây để kiểm tra xem cây có phải là cây tìm kiếm nhị phân không -> O(n)
+
+8. Hàm inorder(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+9. Hàm isMaxHeapTree(): O(n)
+	+ Tốt nhất: cây có 1 node -> O(1)
+	+ Xấu nhất: cây có n node nên phải kiếm tra từng node xem có phải node max-heap không -> O(n)
+
+10. Hàm height(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+11. Hàm depth(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+12. Hàm numOfLeaves(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+13. Hàm findMax(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+14. Hàm findMaxChild(): O(n)
+	+ Tốt nhất: cây không có con -> O(1)
+	+ Xấu nhất: cây có n con -> O(n)
+
+
+
+Tổng hợp:
+
+Hàm		Độ phức tạp thời gian	      Tốt nhất	      Xấu nhất
+findNode()		O(n)			O(1)		O(n)	
+insert()		O(n)			O(1)		O(n)	
+remove()		O(n)			O(1)		O(n)	
+preorder()		O(n)			O(1)		O(n)	
+postorder()		O(n)			O(1)		O(n)
+inorder()		O(n)			O(1)		O(n)	
+isBinaryTree()		O(n)			O(1)		O(n)	
+isBinarySearchTree()	O(n)			O(1)		O(n)	
+isMaxHeapTree()		O(n)			O(1)		O(n)	
+height()		O(n)			O(1)		O(n)
+depth()			O(n)			O(1)		O(n)
+numOfLeaves()		O(n)			O(1)		O(n)	
+findMax()		O(n)			O(1)		O(n)
+findMaxChild()		O(n)			O(1)		O(n)
