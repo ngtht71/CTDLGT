@@ -1,0 +1,38 @@
+A.2
+Với V đỉnh và E cạnh (không có cạnh song song):
+Chọn 2 đỉnh từ V đỉnh tạo thành 1 cạnh: tổ hợp chập 2 của V --> (V)C(2)
+Chọn 2 cạnh từ E cạnh để tạo thành 1 đồ thị: tổ hợp chập 2 của E --> (E)C(2)
+Ta cần chọn E cạnh từ số lượng tổ hợp của tất cả các cặp đỉnh có thể được tạo ra từ V đỉnh.
+Vậy nên số lượng đồ thị vô hướng khác nhau có V đỉnh và E cạnh (không có cạnh song song) là:
+tổ hợp chập (VC2) của (EC2)
+--> (VC2   --> (VC2)C(EC2)
+     EC2)
+
+A.4
+Chứng minh 1: Nếu G là đồ thị hai mầu, thì nó không chứa chu trình độ dài lẻ.
+Giả sử G là đồ thị hai mầu. Điều này có nghĩa là có một cách tô màu đỉnh sao cho không có hai đỉnh kề nhau có cùng màu. 
+Giả sử ngược lại, tức là có một cạnh (u,v) trong đồ thị mà hai đỉnh u và v có cùng màu. Nhưng điều này không thể xảy ra trong đồ thị hai mầu. 
+Do đó, nếu G là đồ thị hai mầu, thì không có chu trình độ dài lẻ.
+
+Chứng minh 2: Nếu G không chứa chu trình độ dài lẻ, thì nó là đồ thị hai mầu.
+Giả sử G không chứa chu trình độ dài lẻ. Chúng ta sẽ chứng minh rằng G là đồ thị hai mầu.
+Gọi U là tập hợp các đỉnh có màu 1, và V là tập hợp các đỉnh có màu 2. U và V không chứa đỉnh nào chung.
+Giả sử ngược lại, tức là có một chu trình độ dài lẻ trong G. 
+Điều này có nghĩa là có một chuỗi đỉnh (v1,v2,…,vk,v1) trong đó vi ∈ U khi i là số chẵn và vi ∈ V khi i là số lẻ. 
+Nếu ta bắt đầu từ một đỉnh có màu 1 (v1∈U), và mỗi bước tiếp theo là đến một đỉnh có màu khác. 
+Do đó, không thể có chu trình độ dài lẻ trong G.
+Như vậy, nếu G không chứa chu trình độ dài lẻ, thì G là đồ thị hai mầu.
+
+A.5
+Gọi G là một đồ thị không có điểm articulation. Chọn một cặp đỉnh bất kỳ s và t trong G và một đường đi nối giữa chúng.
+
+Giả sử có một đỉnh v trên đường đi giữa s và t sao cho nếu ta xóa v và các cạnh kề, đồ thị mất tính liên thông. Điều này có nghĩa là có ít nhất hai thành phần liên thông trong G-{v}. Gọi S là thành phần liên thông chứa s, T là thành phần liên thông chứa t.
+
+TH1. S và T không chứa đỉnh v: Trong trường hợp này, ta đã tìm thấy hai thành phần liên thông không giao nhau (S và T) giữa s và t không đi qua v.
+
+TH2. Một trong S hoặc T chứa đỉnh v: Giả sử S chứa v, nhưng T không chứa v. Trong trường hợp này, ta có thể xem xét đường đi giữa s và v trong s và đường đi giữa v và t trong T. Đường đi giữa s và v không đi qua v (vì S không chứa v), và đường đi giữa v và t không đi qua v (vì T không chứa v). Do đó, ta đã tìm thấy hai đường đi không giao nhau giữa s và t không đi qua v.
+
+Do đó, trong cả hai trường hợp, ta đều có ít nhất hai đường đi không giao nhau giữa s và t.
+
+Vì s và t được chọn một cách tùy ý, ta có thể áp dụng kết luận này cho mọi cặp đỉnh trong đồ thị. Do đó, nếu đồ thị không có điểm articulation, nó là đồ thị biconnected.
+0
